@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcSeviceMovies";
+
+package Movie;
+
+service MovieSvc {
+
+  rpc InPut (ParametersInPut) returns (ResultSearch);
+}
+
+message ParametersInPut {
+  string name = 1;
+}
+
+message ResultSearch {
+  string message = 1;
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcSeviceMovies";
+
+package Movie;
+
+service MovieSvc {
+
+  rpc InPut (ParametersInPut) returns (ResultSearch);
+}
+
+// The request message containing the user's name.
+message ParametersInPut {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message ResultSearch {
+  string message = 1;
+}
